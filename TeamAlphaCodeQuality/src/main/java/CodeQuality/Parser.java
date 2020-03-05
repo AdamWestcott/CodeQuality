@@ -20,7 +20,7 @@ public class Parser {
     ArrayList<String> list2 = new ArrayList<String>();	 	       	    	      	  	     	  	
    for (int i = data.indexOf(" "); i!= -1; i=data.indexOf(" ",i+1))	 	       	    	      	  	     	  	
    {	 	       	    	      	  	     	  	
-   int a = i;	 	       	    	      	  	     	  	
+   int a = i;
    list.add(a);	 	       	    	      	  	     	  	
    }	 	       	    	      	  	     	  	 	       	    	      	  	     	  	
     Integer [] space = new Integer[list.size()];	 	       	    	      	  	     	  	
@@ -35,5 +35,7 @@ public class Parser {
     list2.toArray(pars);	 	       	    	      	  	     	  	 	       	    	      	  	     	  	
         return pars;	 	       	    	      	  	     	  	
   }
+  
+  
     
 }
