@@ -7,6 +7,8 @@ package CodeQuality;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -14,10 +16,16 @@ import java.util.Scanner;
  * @author k1746252
  */
 public class Importer {
-    public static void main(String[] args) throws FileNotFoundException{
+     Exporter egypt = new Exporter();
+  //  public  void ImportFile(String FileName)throws IOException{
+      public void main(String[]args) throws FileNotFoundException,IOException{   
     File file = new File ("H:\\Desktop/captmidn.txt");
-    Scanner importer = new Scanner(file);
-    System.out.println(importer.nextLine());
-}
+    Scanner imports = new Scanner(file);
+     egypt.ExportMeasures();
+  }
+   
+   
     
-}
+  
+  
+  }
