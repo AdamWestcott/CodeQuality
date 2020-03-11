@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class Measurements {
 Importer importedFile = new Importer(); 
 private int count;
+
   public int calculateNumberOfLines()throws IOException{
       File file = importedFile.ImportFile();
       Scanner newFile = new Scanner(file);
@@ -24,4 +25,6 @@ private int count;
       }
       return count;
   }
+  
+  
 }
