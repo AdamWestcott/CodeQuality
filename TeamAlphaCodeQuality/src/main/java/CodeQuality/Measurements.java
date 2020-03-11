@@ -6,8 +6,6 @@
 package CodeQuality;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -15,15 +13,15 @@ import java.util.Scanner;
  *
  * @author k1746252
  */
-public class Importer {
-    
-  private String filepath;
-  
-  public  File ImportFile()throws IOException{
-    filepath = "H:\\Desktop/captmidn.txt";
-    File file = new File (filepath);
-    return file; 
-    
+public class Measurements {
+Importer importedFile = new Importer(); 
+private int count;
+  public int calculateNumberOfLines()throws IOException{
+      File file = importedFile.ImportFile();
+      Scanner newFile = new Scanner(file);
+      while(newFile.hasNextLine()){
+          count++;
+      }
+      return count;
   }
-  
-  }
+}
