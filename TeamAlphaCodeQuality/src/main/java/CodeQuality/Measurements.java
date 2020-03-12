@@ -15,7 +15,9 @@ import java.util.Scanner;
  */
 public class Measurements {
 Importer importedFile = new Importer(); 
+Parser Measures = new Parser();
 private int count;
+private int keywordCount;
 
   public int calculateNumberOfLines()throws IOException{
       try{
@@ -30,7 +32,15 @@ private int count;
  catch(IOException e){
           throw e;
       }   
+  }
+  
+  public int calculateNumberOfKeywords() throws IOException{
+      Measures.parse();
+      keywordCount=Measures.getTotalKeywords();
+      return keywordCount;
+  }
+  
   
   
 }
-}
+

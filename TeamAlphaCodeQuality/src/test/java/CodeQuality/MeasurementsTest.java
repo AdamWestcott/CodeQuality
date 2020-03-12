@@ -50,4 +50,13 @@ public class MeasurementsTest {
         // TODO review the generated test code and remove the default call to fail.
     }
     
+    public void testcalculateNumberOfKeywords() throws Exception {
+        System.out.println("calculateNumberOfLines");
+        Measurements instance = new Measurements();
+        int expResult = 16;
+        int result = instance.calculateNumberOfKeywords();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+    }
+    
 }
