@@ -19,11 +19,10 @@ public class Importer {
     
   private String filepath;
   
-  public  File ImportFile()throws IOException{
+  public  File ImportFile(){
     filepath = "H:\\Desktop/captmidn.txt";
     File file = new File (filepath);
-    return file; 
-    
+    return file;  
   }
   
   }

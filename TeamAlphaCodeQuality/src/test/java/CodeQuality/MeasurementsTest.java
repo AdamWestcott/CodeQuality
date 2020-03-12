@@ -44,7 +44,7 @@ public class MeasurementsTest {
     public void testCalculateNumberOfLines() throws Exception {
         System.out.println("calculateNumberOfLines");
         Measurements instance = new Measurements();
-        int expResult = 19;
+        int expResult = 20;
         int result = instance.calculateNumberOfLines();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

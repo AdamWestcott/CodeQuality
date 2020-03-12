@@ -18,13 +18,19 @@ Importer importedFile = new Importer();
 private int count;
 
   public int calculateNumberOfLines()throws IOException{
+      try{
       File file = importedFile.ImportFile();
       Scanner newFile = new Scanner(file);
       while(newFile.hasNextLine()){
           count++;
+          newFile.nextLine();
       }
       return count;
   }
+ catch(IOException e){
+          throw e;
+      }   
   
   
+}
 }

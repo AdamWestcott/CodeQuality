@@ -140,13 +140,13 @@ public class Parser {
       finallyNumber++;
   }
           if (currentLine.contains("float")) {
-          floatNumber++;
+      floatNumber++;
   }
-          if (currentLine.contains("forNumber")) {
+          if (currentLine.contains("for")) {
       forNumber++;
   }
-          if (currentLine.contains("boolean")) {
-      booleanNumber++;
+          if (currentLine.contains("goto")) {
+      gotoNumber++;
   }
           if (currentLine.contains("break")) {
       breakNumber++;
