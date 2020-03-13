@@ -524,25 +524,26 @@ volatileNumber+
 whileNumber;   
 }
   
-  public int calculateNodes() throws IOException
-  {
-      parse();
-      nodes=2; //Start and end of code
-      nodes= nodes + (ifNumber*4); // Number of nodes per if Statement
-      nodes= nodes + (whileNumber*3);
-      nodes = nodes +(forNumber*4);
-      return nodes;
-  }
-  
-  public int calculateEdges() throws IOException
-  {
-      parse();
-      edges=2;//end of the code
-      edges= edges + (ifNumber*5); // Number of nodes per if Statement
-      edges= edges + (whileNumber*4);
-      edges = edges +(forNumber*5);
-      return edges;
-  }
+//  public int calculateNodes() throws IOException
+//  {
+//      parse();
+//      nodes=2; //Start and end of code
+//      nodes= nodes + (ifNumber*2); // Number of nodes per if Statement
+//      nodes= nodes + (whileNumber*3);
+//      nodes = nodes + elseNumber;
+//      nodes = nodes +(forNumber*4);
+//      return nodes;
+//  }
+//  
+//  public int calculateEdges() throws IOException
+//  {
+//      parse();
+//      edges=2;//end of the code
+//      edges= edges + (ifNumber*5); // Number of nodes per if Statement
+//      edges= edges + (whileNumber*4);
+//      edges = edges +(forNumber*5);
+//      return edges;
+//  }
   
   
 }

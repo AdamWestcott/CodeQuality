@@ -43,10 +43,8 @@ private int keywordCount;
   
   public int calculateCyclomaticComplexity() throws IOException
   {
-      int edges = Measures.calculateEdges();
-      int nodes = Measures.calculateNodes();
-      
-     int cyclomaticComplexity = edges-nodes+2;
+      Measures.parse();
+     int cyclomaticComplexity =Measures.getIfNumber()+Measures.getWhileNumber()+Measures.getForNumber()+Measures.getSwitchNumber()+1;
      return cyclomaticComplexity;
   }
   
