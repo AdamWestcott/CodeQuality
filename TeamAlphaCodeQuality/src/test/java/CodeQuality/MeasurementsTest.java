@@ -44,7 +44,7 @@ public class MeasurementsTest {
     public void testCalculateNumberOfLines() throws Exception {
         System.out.println("calculateNumberOfLines");
         Measurements instance = new Measurements();
-        int expResult = 68;
+        int expResult = 63;
         int result = instance.calculateNumberOfLines();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -53,7 +53,7 @@ public class MeasurementsTest {
     public void testcalculateNumberOfKeywords() throws Exception {
         System.out.println("calculateNumberOfKeywords");
         Measurements instance = new Measurements();
-        int expResult = 35;
+        int expResult = 33;
         int result = instance.calculateNumberOfKeywords();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
