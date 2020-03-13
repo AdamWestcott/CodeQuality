@@ -18,6 +18,7 @@ Importer importedFile = new Importer();
 Parser Measures = new Parser();
 private int count;
 private int keywordCount;
+  
 
   public int calculateNumberOfLines()throws IOException{
       try{
@@ -38,6 +39,15 @@ private int keywordCount;
       Measures.parse();
       keywordCount=Measures.getTotalKeywords();
       return keywordCount;
+  }
+  
+  public int calculateCyclomaticComplexity() throws IOException
+  {
+      int edges = Measures.calculateEdges();
+      int nodes = Measures.calculateNodes();
+      
+     int cyclomaticComplexity = edges-nodes+2;
+     return cyclomaticComplexity;
   }
   
   
