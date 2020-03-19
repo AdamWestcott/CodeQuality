@@ -18,6 +18,7 @@ Importer importedFile = new Importer();
 Parser Measures = new Parser();
 private int count;
 private int keywordCount;
+private String code;
   
 
   public int calculateNumberOfLines()throws IOException{
@@ -34,6 +35,8 @@ private int keywordCount;
           throw e;
       }   
   }
+  
+ 
   
   public int calculateNumberOfKeywords() throws IOException{
       Measures.parse();
