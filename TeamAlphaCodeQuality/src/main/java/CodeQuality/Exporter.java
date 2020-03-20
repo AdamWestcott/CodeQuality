@@ -14,11 +14,17 @@ import java.io.IOException;
  * @author k1746252
  */
 public class Exporter {
+    Measurements measures = new Measurements();
   
   public void ExportMeasures() throws IOException	 	       	    	      	  	     	  	
   {	     
+   int numberOfLines = measures.calculateNumberOfLines();
+   int numberOfKeywords = measures.calculateNumberOfKeywords();
+   int cyclomaticComplexity = measures.calculateCyclomaticComplexity();
   try (FileWriter exports = new FileWriter("H:\\Desktop")) {
-      exports.write("egypt");
+      exports.write("Cyclomatic Complexity: "+cyclomaticComplexity+ "\n");
+      exports.write("Number of Lines: "+numberOfLines+ "\n");
+      exports.write("Number of Keywords: "+numberOfKeywords);
       exports.close();
   }
   catch(FileNotFoundException e){
