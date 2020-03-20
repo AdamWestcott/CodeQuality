@@ -53,7 +53,7 @@ onAction ="#handleButtonAction"   />
         <menus>
             <Menu text="Measures">
                 <items>
-                    <MenuItem text="Calculate Measures"/>
+                    <MenuItem text="Calculate Measures" onAction ="#CalculateMeasures"/>
                 </items>
             </Menu>
           

@@ -15,7 +15,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -33,8 +35,6 @@ import javafx.stage.Stage;
 public class FXMLController implements Initializable {
     Importer importedCode = new Importer();
     Measurements measures = new Measurements();
-    @FXML
-    private Stage stage;
     @FXML
     private TextArea view1;
     @FXML
@@ -76,6 +76,14 @@ public class FXMLController implements Initializable {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+        @FXML
+        private void CalculateMeasures (ActionEvent event) throws IOException {
+        Parent part = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.show();
     }
     
     @Override
