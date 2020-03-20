@@ -5,45 +5,55 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
 
 
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
+          fx:id="gridPane"
           fx:controller="com.mycompany.gui.FXMLController">
+          
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
     <Label style="-fx-font: NORMAL 20 Tahoma;" text="Code Quality"                
            GridPane.columnIndex="0" GridPane.rowIndex="0" fx:id="addressBookLabel">
     </Label>
-    <TreeView fx:id="view1" 
+    <TextArea fx:id="view1" 
+               text = ""
                GridPane.columnIndex="0" 
                GridPane.columnSpan="1" 
                GridPane.hgrow="ALWAYS" 
-               GridPane.vgrow="ALWAYS"        
+               GridPane.vgrow="ALWAYS"
                GridPane.rowIndex="1">
-    </TreeView>
+    </TextArea>
+   
     <Button fx:id="button1" 
            GridPane.columnIndex="0" 
             GridPane.rowIndex="2" 
-            text="Import" />
-    <TextField fx:id="view2" 
-               GridPane.columnIndex="1" 
-               GridPane.columnSpan="1" 
-               GridPane.hgrow="ALWAYS" 
-               GridPane.vgrow="ALWAYS"        
-               GridPane.rowIndex="1">     
-    </TextField>
-    <TreeView fx:id="view3" 
+            text="Import"
+onAction ="#handleButtonAction"   />
+    <TextArea fx:id="view3" 
+               text = ""
                GridPane.columnIndex="2" 
                GridPane.columnSpan="1" 
                GridPane.hgrow="ALWAYS" 
                GridPane.vgrow="ALWAYS"        
                GridPane.rowIndex="1">
-    </TreeView>
+    </TextArea>
+    
+    <Button fx:id="importFile2" 
+           GridPane.columnIndex="2" 
+            GridPane.rowIndex="2" 
+            text="Import"
+     onAction ="#handleButtonAction2"   />
 
     <MenuBar fx:id="menuBar" >
         <menus>
             <Menu text="Measures">
                 <items>
-                    <MenuItem text="Calculate Measures" />
+                    <MenuItem text="Calculate Measures"/>
                 </items>
             </Menu>
           
