@@ -11,7 +11,7 @@
 
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
-          fx:id="gridPane"
+          fx:id="gridPane2"
           fx:controller="com.mycompany.gui.FXMLController">
           
     <padding>
@@ -22,6 +22,7 @@
     </Label>
     <TextArea fx:id="view1" 
                text = ""
+               editable="false"
                GridPane.columnIndex="0" 
                GridPane.columnSpan="1" 
                GridPane.hgrow="ALWAYS" 
@@ -32,10 +33,11 @@
     <Button fx:id="button1" 
            GridPane.columnIndex="0" 
             GridPane.rowIndex="2" 
-            text="Import"
+            text="Import First Code"
 onAction ="#handleButtonAction"   />
     <TextArea fx:id="view3" 
                text = ""
+               editable="false"
                GridPane.columnIndex="2" 
                GridPane.columnSpan="1" 
                GridPane.hgrow="ALWAYS" 
@@ -46,14 +48,14 @@ onAction ="#handleButtonAction"   />
     <Button fx:id="importFile2" 
            GridPane.columnIndex="2" 
             GridPane.rowIndex="2" 
-            text="Import"
+            text="Import Second Code"
      onAction ="#handleButtonAction2"   />
 
     <MenuBar fx:id="menuBar" >
         <menus>
             <Menu text="Measures">
                 <items>
-                    <MenuItem text="Calculate Measures" onAction ="#CalculateMeasures"/>
+                    <MenuItem text="Calculate Measures" onAction ="#OpenMeasure1"/>
                 </items>
             </Menu>
           

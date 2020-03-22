@@ -35,12 +35,14 @@ import javafx.stage.Stage;
 public class FXMLController implements Initializable {
     Importer importedCode = new Importer();
     Measurements measures = new Measurements();
+    MeasureScene1Controller measure1 = new MeasureScene1Controller();
     @FXML
     private TextArea view1;
     @FXML
-    private TextArea view3;
+    private TextArea view3;    
     private String filepath;
     private String code;
+    private String code1Measures;
     
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
@@ -55,7 +57,6 @@ public class FXMLController implements Initializable {
             scanner.close();
              
             view1.setText(code);
-            System.out.println(code);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -72,19 +73,21 @@ public class FXMLController implements Initializable {
             scanner.close();
              
             view3.setText(code);
-            System.out.println(code);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
         @FXML
-        private void CalculateMeasures (ActionEvent event) throws IOException {
-        Parent part = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(part);
-        stage.setScene(scene);
-        stage.show();
-    }
+        private void OpenMeasure1 (ActionEvent event) throws IOException {
+            Parent part = FXMLLoader.load(getClass().getResource("/fxml/MeasureScene1.fxml"));
+            Stage stage2 = new Stage();
+        Scene scene2 = new Scene(part);
+        scene2.getStylesheets().add("/styles/Styles.css");
+        stage2.setScene(scene2);
+        stage2.show();
+        measure1.CalculateMeasures();
+        
+           }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
