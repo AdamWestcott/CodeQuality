@@ -31,6 +31,9 @@ public class Exporter {
       exports.write("Number of Lines: "+numberOfLines+ "\n");
       exports.write("Number of Keywords: "+numberOfKeywords);
       exports.close();
+     numberOfLines =0;
+   numberOfKeywords = 0;
+   cyclomaticComplexity = 0;
   }
   catch(FileNotFoundException e){
           throw e;
@@ -48,7 +51,11 @@ public class Exporter {
       exports.write("Number of Lines: "+numberOfLines+ "\n");
       exports.write("Number of Keywords: "+numberOfKeywords);
       exports.close();
+      numberOfLines =0;
+   numberOfKeywords = 0;
+   cyclomaticComplexity = 0;
   }
+  
   catch(FileNotFoundException e){
           throw e;
       }
