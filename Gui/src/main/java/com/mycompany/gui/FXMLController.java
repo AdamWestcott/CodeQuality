@@ -83,6 +83,9 @@ public class FXMLController implements Initializable {
         private void OpenMeasure1 (ActionEvent event) throws IOException {
         measure1.CalculateMeasures1();
            }
+        private void OpenMeasure2 (ActionEvent event) throws IOException {
+        measure1.CalculateMeasures1();
+           }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
