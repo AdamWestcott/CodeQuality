@@ -15,13 +15,18 @@ import java.io.IOException;
  */
 public class Exporter {
     Measurements measures = new Measurements();
-  
+    private String filename;
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+   
   public void ExportMeasures1() throws IOException	 	       	    	      	  	     	  	
   {	     
    int numberOfLines = measures.calculateNumberOfLines();
    int numberOfKeywords = measures.calculateNumberOfKeywords();
    int cyclomaticComplexity = measures.calculateCyclomaticComplexity();
-  try (FileWriter exports = new FileWriter("H:\\Desktop/ExportedResults1.txt")) {
+  try (FileWriter exports = new FileWriter("H:\\Desktop/"+filename+".txt")) {
       exports.write("Cyclomatic Complexity: "+cyclomaticComplexity+ "\n");
       exports.write("Number of Lines: "+numberOfLines+ "\n");
       exports.write("Number of Keywords: "+numberOfKeywords);

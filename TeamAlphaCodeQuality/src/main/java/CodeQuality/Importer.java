@@ -16,9 +16,13 @@ import java.util.Scanner;
  * @author k1746252
  */
 public class Importer {
+
+    private String filepath = "H:\\Desktop/captmidn.txt";
     
-  private String filepath;
-  
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
+    }
+    
   public  File ImportFile(){
     filepath = "H:\\Desktop/captmidn.txt";
     File file = new File (filepath);
