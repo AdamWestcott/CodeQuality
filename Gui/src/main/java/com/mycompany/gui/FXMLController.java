@@ -35,6 +35,7 @@ import javafx.stage.Stage;
 public class FXMLController implements Initializable {
     Importer importedCode = new Importer();
     Measurements measures = new Measurements();
+    @FXML
     MeasureScene1Controller measure1 = new MeasureScene1Controller();
     @FXML
     private TextArea view1;
@@ -79,14 +80,7 @@ public class FXMLController implements Initializable {
     }
         @FXML
         private void OpenMeasure1 (ActionEvent event) throws IOException {
-            Parent part = FXMLLoader.load(getClass().getResource("/fxml/MeasureScene1.fxml"));
-            Stage stage2 = new Stage();
-        Scene scene2 = new Scene(part);
-        scene2.getStylesheets().add("/styles/Styles.css");
-        stage2.setScene(scene2);
-        stage2.show();
         measure1.CalculateMeasures();
-        
            }
     
     @Override
