@@ -55,7 +55,8 @@ onAction ="#handleButtonAction"   />
         <menus>
             <Menu text="Measures">
                 <items>
-                    <MenuItem text="Calculate Measures" onAction ="#OpenMeasure1"/>
+                    <MenuItem text="Calculate Measures for First Code" onAction ="#OpenMeasure1"/>
+                    <MenuItem text="Calculate Measures for Second Code" onAction ="#OpenMeasure2"/>
                 </items>
             </Menu>
           

@@ -37,6 +37,7 @@ public class FXMLController implements Initializable {
     Measurements measures = new Measurements();
     @FXML
     MeasureScene1Controller measure1 = new MeasureScene1Controller();
+    MeasureScene2Controller measure2 = new MeasureScene2Controller();
     @FXML
     private TextArea view1;
     @FXML
@@ -83,8 +84,9 @@ public class FXMLController implements Initializable {
         private void OpenMeasure1 (ActionEvent event) throws IOException {
         measure1.CalculateMeasures1();
            }
+        @FXML
         private void OpenMeasure2 (ActionEvent event) throws IOException {
-        measure1.CalculateMeasures1();
+        measure2.CalculateMeasures2();
            }
     
     @Override
