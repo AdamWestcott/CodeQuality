@@ -17,6 +17,7 @@ public class Exporter {
     Measurements measures = new Measurements();
     private String filename1;
     private String filename2;
+    private String filename3;
     
     public void setFilename1(String filename) {
         this.filename1 = filename;
@@ -24,6 +25,10 @@ public class Exporter {
     
     public void setFilename2(String filename) {
         this.filename2 = filename;
+    }
+    
+     public void setFilename3(String filename) {
+        this.filename3 = filename;
     }
    
   public void ExportMeasures1() throws IOException	 	       	    	      	  	     	  	
@@ -59,6 +64,21 @@ public class Exporter {
       numberOfLines2 =0;
    numberOfKeywords2 = 0;
    cyclomaticComplexity2 = 0;
+  }
+  
+  catch(FileNotFoundException e){
+          throw e;
+      }
+  
+  }
+  
+  public void ExportMeasures3() throws IOException	 	       	    	      	  	     	  	
+  {	     
+  try (FileWriter exports3 = new FileWriter("H:\\Desktop/"+filename3+".txt")) {
+      exports3.write("Cyclomatic Complexity: "+measures.compareCyclomaticComplexity()+ "\n");
+      exports3.write("Number of Lines: "+measures.compareNumberOfLines()+ "\n");
+      exports3.write("Number of Keywords: "+measures.compareNumberOfKeywords());
+      exports3.close();
   }
   
   catch(FileNotFoundException e){

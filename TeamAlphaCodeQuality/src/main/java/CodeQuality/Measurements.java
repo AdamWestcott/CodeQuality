@@ -52,7 +52,13 @@ private int keywordCount;
       }   
   }
   
- 
+  public String compareNumberOfLines()throws IOException{
+      if(calculateNumberOfLines1()>calculateNumberOfLines2()){
+          return "Code 2 has less lines of code";
+      }
+      else
+          return "Code 1 has less lines of code";
+  }
   
   public int calculateNumberOfKeywords1() throws IOException{
       Measures.setAbstractNumber(0);
@@ -177,6 +183,14 @@ private int keywordCount;
       return keywordCount;
   }
   
+  public String compareNumberOfKeywords()throws IOException{
+      if(calculateNumberOfKeywords1()>calculateNumberOfKeywords2()){
+          return "Code 2 has less java keywords than code 1 ";
+      }
+      else
+          return "Code 1 has less java keywords than code 2";
+  }
+  
   public int calculateCyclomaticComplexity1() throws IOException
   {
       Measures.setIfNumber(0);
@@ -209,6 +223,14 @@ private int keywordCount;
              +Measures.getCaseNumber()
              +1;
      return cyclomaticComplexity;
+  }
+  
+  public String compareCyclomaticComplexity()throws IOException{
+      if(calculateCyclomaticComplexity1()>calculateCyclomaticComplexity2()){
+          return "Code 1 is more complex than code 2 ";
+      }
+      else
+          return "Code 2 is more complex than code 1";
   }
   
   
