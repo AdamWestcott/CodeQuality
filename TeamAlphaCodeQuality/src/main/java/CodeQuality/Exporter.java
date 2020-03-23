@@ -23,17 +23,17 @@ public class Exporter {
    
   public void ExportMeasures1() throws IOException	 	       	    	      	  	     	  	
   {	     
-   int numberOfLines = measures.calculateNumberOfLines1();
-   int numberOfKeywords = measures.calculateNumberOfKeywords1();
-   int cyclomaticComplexity = measures.calculateCyclomaticComplexity1();
+   int numberOfLines1 = measures.calculateNumberOfLines1();
+   int numberOfKeywords1 = measures.calculateNumberOfKeywords1();
+   int cyclomaticComplexity1 = measures.calculateCyclomaticComplexity1();
   try (FileWriter exports = new FileWriter("H:\\Desktop/"+filename+".txt")) {
-      exports.write("Cyclomatic Complexity: "+cyclomaticComplexity+ "\n");
-      exports.write("Number of Lines: "+numberOfLines+ "\n");
-      exports.write("Number of Keywords: "+numberOfKeywords);
+      exports.write("Cyclomatic Complexity: "+cyclomaticComplexity1+ "\n");
+      exports.write("Number of Lines: "+numberOfLines1+ "\n");
+      exports.write("Number of Keywords: "+numberOfKeywords1);
       exports.close();
-     numberOfLines =0;
-   numberOfKeywords = 0;
-   cyclomaticComplexity = 0;
+     numberOfLines1 =0;
+   numberOfKeywords1 = 0;
+   cyclomaticComplexity1 = 0;
   }
   catch(FileNotFoundException e){
           throw e;
@@ -43,17 +43,17 @@ public class Exporter {
   
   public void ExportMeasures2() throws IOException	 	       	    	      	  	     	  	
   {	     
-   int numberOfLines = measures.calculateNumberOfLines2();
-   int numberOfKeywords = measures.calculateNumberOfKeywords2();
-   int cyclomaticComplexity = measures.calculateCyclomaticComplexity2();
+   int numberOfLines2 = measures.calculateNumberOfLines2();
+   int numberOfKeywords2 = measures.calculateNumberOfKeywords2();
+   int cyclomaticComplexity2 = measures.calculateCyclomaticComplexity2();
   try (FileWriter exports = new FileWriter("H:\\Desktop/"+filename+".txt")) {
-      exports.write("Cyclomatic Complexity: "+cyclomaticComplexity+ "\n");
-      exports.write("Number of Lines: "+numberOfLines+ "\n");
-      exports.write("Number of Keywords: "+numberOfKeywords);
+      exports.write("Cyclomatic Complexity: "+cyclomaticComplexity2+ "\n");
+      exports.write("Number of Lines: "+numberOfLines2+ "\n");
+      exports.write("Number of Keywords: "+numberOfKeywords2);
       exports.close();
-      numberOfLines =0;
-   numberOfKeywords = 0;
-   cyclomaticComplexity = 0;
+      numberOfLines2 =0;
+   numberOfKeywords2 = 0;
+   cyclomaticComplexity2 = 0;
   }
   
   catch(FileNotFoundException e){

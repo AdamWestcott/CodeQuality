@@ -17,9 +17,8 @@ import java.util.Scanner;
 public class Parser {	
   Importer importedFile = new Importer();
   
-  private int cyclomaticComplexity;
-  private int nodes;
-  private int edges;
+
+    
   
   private int abstractNumber;
   private int assertNumber;
@@ -77,6 +76,234 @@ public class Parser {
   private int whileNumber;
   private int TotalKeywords1;
   private int TotalKeywords2;
+  
+  public void setImportedFile(Importer importedFile) {
+        this.importedFile = importedFile;
+    }
+
+    public void setAbstractNumber(int abstractNumber) {
+        this.abstractNumber = abstractNumber;
+    }
+
+    public void setAssertNumber(int assertNumber) {
+        this.assertNumber = assertNumber;
+    }
+
+    public void setBooleanNumber(int booleanNumber) {
+        this.booleanNumber = booleanNumber;
+    }
+
+    public void setBreakNumber(int breakNumber) {
+        this.breakNumber = breakNumber;
+    }
+
+    public void setByteNumber(int byteNumber) {
+        this.byteNumber = byteNumber;
+    }
+
+    public void setCaseNumber(int caseNumber) {
+        this.caseNumber = caseNumber;
+    }
+
+    public void setCatchNumber(int catchNumber) {
+        this.catchNumber = catchNumber;
+    }
+
+    public void setCharNumber(int charNumber) {
+        this.charNumber = charNumber;
+    }
+
+    public void setClassNumber(int classNumber) {
+        this.classNumber = classNumber;
+    }
+
+    public void setContinueNumber(int continueNumber) {
+        this.continueNumber = continueNumber;
+    }
+
+    public void setConstNumber(int constNumber) {
+        this.constNumber = constNumber;
+    }
+
+    public void setDefaultNumber(int defaultNumber) {
+        this.defaultNumber = defaultNumber;
+    }
+
+    public void setDoNumber(int doNumber) {
+        this.doNumber = doNumber;
+    }
+
+    public void setDoubleNumber(int doubleNumber) {
+        this.doubleNumber = doubleNumber;
+    }
+
+    public void setElseNumber(int elseNumber) {
+        this.elseNumber = elseNumber;
+    }
+
+    public void setEnumNumber(int enumNumber) {
+        this.enumNumber = enumNumber;
+    }
+
+    public void setExportsNumber(int exportsNumber) {
+        this.exportsNumber = exportsNumber;
+    }
+
+    public void setExtendsNumber(int extendsNumber) {
+        this.extendsNumber = extendsNumber;
+    }
+
+    public void setFinalNumber(int finalNumber) {
+        this.finalNumber = finalNumber;
+    }
+
+    public void setFinallyNumber(int finallyNumber) {
+        this.finallyNumber = finallyNumber;
+    }
+
+    public void setFloatNumber(int floatNumber) {
+        this.floatNumber = floatNumber;
+    }
+
+    public void setForNumber(int forNumber) {
+        this.forNumber = forNumber;
+    }
+
+    public void setGotoNumber(int gotoNumber) {
+        this.gotoNumber = gotoNumber;
+    }
+
+    public void setIfNumber(int ifNumber) {
+        this.ifNumber = ifNumber;
+    }
+
+    public void setImplementsNumber(int implementsNumber) {
+        this.implementsNumber = implementsNumber;
+    }
+
+    public void setImportNumber(int importNumber) {
+        this.importNumber = importNumber;
+    }
+
+    public void setInstanceofNumber(int instanceofNumber) {
+        this.instanceofNumber = instanceofNumber;
+    }
+
+    public void setIntNumber(int intNumber) {
+        this.intNumber = intNumber;
+    }
+
+    public void setInterfaceNumber(int interfaceNumber) {
+        this.interfaceNumber = interfaceNumber;
+    }
+
+    public void setLongNumber(int longNumber) {
+        this.longNumber = longNumber;
+    }
+
+    public void setModuleNumber(int moduleNumber) {
+        this.moduleNumber = moduleNumber;
+    }
+
+    public void setNativeNumber(int nativeNumber) {
+        this.nativeNumber = nativeNumber;
+    }
+
+    public void setNewNumber(int newNumber) {
+        this.newNumber = newNumber;
+    }
+
+    public void setPackageNumber(int packageNumber) {
+        this.packageNumber = packageNumber;
+    }
+
+    public void setPrivateNumber(int privateNumber) {
+        this.privateNumber = privateNumber;
+    }
+
+    public void setProtectedNumber(int protectedNumber) {
+        this.protectedNumber = protectedNumber;
+    }
+
+    public void setPublicNumber(int publicNumber) {
+        this.publicNumber = publicNumber;
+    }
+
+    public void setRequiresNumber(int requiresNumber) {
+        this.requiresNumber = requiresNumber;
+    }
+
+    public void setReturnNumber(int returnNumber) {
+        this.returnNumber = returnNumber;
+    }
+
+    public void setShortNumber(int shortNumber) {
+        this.shortNumber = shortNumber;
+    }
+
+    public void setStaticNumber(int staticNumber) {
+        this.staticNumber = staticNumber;
+    }
+
+    public void setStrictfpNumber(int strictfpNumber) {
+        this.strictfpNumber = strictfpNumber;
+    }
+
+    public void setSuperNumber(int superNumber) {
+        this.superNumber = superNumber;
+    }
+
+    public void setSwitchNumber(int switchNumber) {
+        this.switchNumber = switchNumber;
+    }
+
+    public void setSynchronizedNumber(int synchronizedNumber) {
+        this.synchronizedNumber = synchronizedNumber;
+    }
+
+    public void setThisNumber(int thisNumber) {
+        this.thisNumber = thisNumber;
+    }
+
+    public void setThrowNumber(int throwNumber) {
+        this.throwNumber = throwNumber;
+    }
+
+    public void setThrowsNumber(int throwsNumber) {
+        this.throwsNumber = throwsNumber;
+    }
+
+    public void setTransientNumber(int transientNumber) {
+        this.transientNumber = transientNumber;
+    }
+
+    public void setTryNumber(int tryNumber) {
+        this.tryNumber = tryNumber;
+    }
+
+    public void setVarNumber(int varNumber) {
+        this.varNumber = varNumber;
+    }
+
+    public void setVoidNumber(int voidNumber) {
+        this.voidNumber = voidNumber;
+    }
+
+    public void setVolatileNumber(int volatileNumber) {
+        this.volatileNumber = volatileNumber;
+    }
+
+    public void setWhileNumber(int whileNumber) {
+        this.whileNumber = whileNumber;
+    }
+
+    public void setTotalKeywords1(int TotalKeywords1) {
+        this.TotalKeywords1 = TotalKeywords1;
+    }
+
+    public void setTotalKeywords2(int TotalKeywords2) {
+        this.TotalKeywords2 = TotalKeywords2;
+    }
  
     public int getAbstractNumber() {
         return abstractNumber;
