@@ -42,22 +42,23 @@ public class FXMLController implements Initializable {
     @FXML
     private TextArea view3;    
     private String filepath;
-    private String code;
+    private String code1;
+    private String code2;
     private String code1Measures;
     
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
      //view1.setText("");
       //filepath = "H:\\Desktop/captmidn.txt";
-      File newFile = importedCode.ImportFile();
+      File newFile1 = importedCode.ImportFile1();
         try {
-            Scanner scanner = new Scanner(newFile);
+            Scanner scanner = new Scanner(newFile1);
             while (scanner.hasNextLine()) {
-                code = code + (scanner.nextLine()+"\n");
+                code1 = code1 + (scanner.nextLine()+"\n");
             }
             scanner.close();
              
-            view1.setText(code);
+            view1.setText(code1);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -65,22 +66,22 @@ public class FXMLController implements Initializable {
     @FXML
     private void handleButtonAction2(ActionEvent event) throws IOException {
      //view1.setText("");
-      File newFile = importedCode.ImportFile();
+      File newFile2 = importedCode.ImportFile2();
         try {
-            Scanner scanner = new Scanner(newFile);
+            Scanner scanner = new Scanner(newFile2);
             while (scanner.hasNextLine()) {
-                code = code + (scanner.nextLine()+"\n");
+                code2 = code2 + (scanner.nextLine()+"\n");
             }
             scanner.close();
              
-            view3.setText(code);
+            view3.setText(code2);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
         @FXML
         private void OpenMeasure1 (ActionEvent event) throws IOException {
-        measure1.CalculateMeasures();
+        measure1.CalculateMeasures1();
            }
     
     @Override

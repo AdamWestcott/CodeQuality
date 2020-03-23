@@ -51,11 +51,11 @@ public class MeasureScene1Controller implements Initializable {
 }
 
      @FXML
-   public void CalculateMeasures() throws IOException {
+   public void CalculateMeasures1() throws IOException {
        Parent root;
-    numberOfLines1 = measures3.calculateNumberOfLines();
-    numberOfKeywords1 = measures3.calculateNumberOfKeywords();
-    cyclomatic1 = measures3.calculateCyclomaticComplexity();
+    numberOfLines1 = measures3.calculateNumberOfLines1();
+    numberOfKeywords1 = measures3.calculateNumberOfKeywords1();
+    cyclomatic1 = measures3.calculateCyclomaticComplexity1();
             code1Measures = "Number of Lines: "+numberOfLines1 +"\n" 
                     + "Number of Keywords: "+numberOfKeywords1 +"\n"
                     + "Cyclomatic Complexity: "+cyclomatic1+"\n";
