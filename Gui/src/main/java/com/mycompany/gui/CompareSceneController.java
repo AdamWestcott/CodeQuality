@@ -55,7 +55,7 @@ Exporter export1 = new Exporter();
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setTitle("Measures for 1st Code");
+        stage.setTitle("Measures for Code Comparasion");
         stage.show();
             
             //measureView.setText(code1Measures);

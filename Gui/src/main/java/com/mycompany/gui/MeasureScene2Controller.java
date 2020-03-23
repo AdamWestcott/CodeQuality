@@ -65,7 +65,7 @@ public class MeasureScene2Controller implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setTitle("Measures for 1st Code");
+        stage.setTitle("Measures for 2nd Code");
         stage.show();
             
             //measureView.setText(code1Measures);
