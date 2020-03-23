@@ -32,33 +32,34 @@ public class MeasureScene2Controller implements Initializable {
     Importer importedCode = new Importer();
     @FXML
     Measurements measures3 = new Measurements();
-    Exporter export1 = new Exporter();
+    Exporter export2 = new Exporter();
     @FXML
     private TextArea measureView2;
     
     private String code1Measures;
-    private int numberOfLines1;
-    private int numberOfKeywords1;
-    private int cyclomatic1;
+    private int numberOfLines2;
+    private int numberOfKeywords2;
+    private int cyclomatic2;
     
     @FXML
     public void setAreaText(String text) {
     measureView2.setText(text);
 }
+    
     public void CalculateMeasures2() throws IOException {
        Parent root;
-    numberOfLines1 = measures3.calculateNumberOfLines2();
-    numberOfKeywords1 = measures3.calculateNumberOfKeywords2();
-    cyclomatic1 = measures3.calculateCyclomaticComplexity2();
-            code1Measures = "Number of Lines: "+numberOfLines1 +"\n" 
-                    + "Number of Keywords: "+numberOfKeywords1 +"\n"
-                    + "Cyclomatic Complexity: "+cyclomatic1+"\n";
+    numberOfLines2 = measures3.calculateNumberOfLines2();
+    numberOfKeywords2 = measures3.calculateNumberOfKeywords2();
+    cyclomatic2 = measures3.calculateCyclomaticComplexity2();
+            code1Measures = "Number of Lines: "+numberOfLines2 +"\n" 
+                    + "Number of Keywords: "+numberOfKeywords2 +"\n"
+                    + "Cyclomatic Complexity: "+cyclomatic2+"\n";
             System.out.println(code1Measures);
-        URL location = getClass().getResource("/fxml/MeasureScene1.fxml");
+        URL location = getClass().getResource("/fxml/MeasureScene2.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
         root = fxmlLoader.load(location.openStream());
-        MeasureScene1Controller contr = fxmlLoader.getController();
+        MeasureScene2Controller contr = fxmlLoader.getController();
         contr.setAreaText(code1Measures);
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -69,17 +70,18 @@ public class MeasureScene2Controller implements Initializable {
             
             //measureView.setText(code1Measures);
            }
-    public void ExportCode1() throws IOException {
-            TextInputDialog exporter1Name = new TextInputDialog();
-            exporter1Name.setTitle("Enter File Name");
-            exporter1Name.getDialogPane().setContentText("Enter File Name");
-            Optional<String> result =exporter1Name.showAndWait();
-            TextField input = exporter1Name.getEditor();
+    @FXML
+    public void ExportCode2() throws IOException {
+            TextInputDialog exporter2Name = new TextInputDialog();
+            exporter2Name.setTitle("Enter File Name");
+            exporter2Name.getDialogPane().setContentText("Enter File Name");
+            Optional<String> result =exporter2Name.showAndWait();
+            TextField input = exporter2Name.getEditor();
             if(input.getText()!= null && input.getText().toString().length()!=0)
             {
-              export1.setFilename(input.getText().toString());
+              export2.setFilename2(input.getText().toString());
             }
-            export1.ExportMeasures2();
+            export2.ExportMeasures2();
            }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

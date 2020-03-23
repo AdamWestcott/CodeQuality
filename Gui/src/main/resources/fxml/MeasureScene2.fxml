@@ -33,5 +33,5 @@
            GridPane.columnIndex="0" 
             GridPane.rowIndex="2" 
             text="Export Measures"
-            onAction ="#ExportCode1"/>
+            onAction ="#ExportCode2"/>
     </GridPane>

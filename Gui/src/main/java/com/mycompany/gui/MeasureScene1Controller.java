@@ -50,7 +50,6 @@ public class MeasureScene1Controller implements Initializable {
     measureView.setText(text);
 }
 
-     @FXML
    public void CalculateMeasures1() throws IOException {
        Parent root;
     numberOfLines1 = measures3.calculateNumberOfLines1();
@@ -75,6 +74,7 @@ public class MeasureScene1Controller implements Initializable {
             
             //measureView.setText(code1Measures);
            }
+   @FXML
    public void ExportCode1() throws IOException {
             TextInputDialog exporter1Name = new TextInputDialog();
             exporter1Name.setTitle("Enter File Name");
@@ -83,7 +83,7 @@ public class MeasureScene1Controller implements Initializable {
             TextField input = exporter1Name.getEditor();
             if(input.getText()!= null && input.getText().toString().length()!=0)
             {
-              export1.setFilename(input.getText().toString());
+              export1.setFilename1(input.getText().toString());
             }
             export1.ExportMeasures1();
            }
