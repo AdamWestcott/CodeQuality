@@ -75,8 +75,8 @@ public class Parser {
   private int voidNumber;
   private int volatileNumber;
   private int whileNumber;
-  private int TotalKeywords;
-
+  private int TotalKeywords1;
+  private int TotalKeywords2;
  
     public int getAbstractNumber() {
         return abstractNumber;
@@ -294,13 +294,244 @@ public class Parser {
         return whileNumber;
     }
 
-    public int getTotalKeywords() {
-        return TotalKeywords;
+    public int getTotalKeywords1() {
+        return TotalKeywords1;
+    }
+    
+    public int getTotalKeywords2() {
+        return TotalKeywords2;
     }
   
-  public void parse()throws IOException	 	       	    	      	  	     	  	
+  public void parse1()throws IOException	 	       	    	      	  	     	  	
   {
-       File file = importedFile.ImportFile();
+       File file = importedFile.ImportFile1();
+      Scanner newFile = new Scanner(file);
+      while(newFile.hasNextLine()){
+          String currentLine =newFile.nextLine();
+          if (currentLine.contains("abstract")) {
+          abstractNumber++;
+  }
+          if (currentLine.contains("assert")) {
+      assertNumber++;
+  }
+          if (currentLine.contains("boolean")) {
+      booleanNumber++;
+  }
+          if (currentLine.contains("break")) {
+      breakNumber++;
+  }
+          if (currentLine.contains("byte")) {
+      byteNumber++;
+  }
+          if (currentLine.contains("case")) {
+      caseNumber++;
+  }
+          if (currentLine.contains("catch")) {
+      catchNumber++;
+  }
+          if (currentLine.contains("char")) {
+      charNumber++;
+  }
+          if (currentLine.contains("class")) {
+      classNumber++;
+  }
+          if (currentLine.contains("continue")) {
+      continueNumber++;
+  }          
+          if (currentLine.contains("const")) {
+      constNumber++;
+  }
+          if (currentLine.contains("default")) {
+      defaultNumber++;
+  }
+          if (currentLine.contains("do")) {
+      doNumber++;
+  }
+          if (currentLine.contains("double")) {
+      doubleNumber++;
+  }
+          if (currentLine.contains("else")) {
+      elseNumber++;
+  }
+          if (currentLine.contains("enum")) {
+      enumNumber++;
+  }
+          if (currentLine.contains("exports")) {
+      exportsNumber++;
+  }
+          if (currentLine.contains("extends")) {
+      extendsNumber++;
+  }
+          if (currentLine.contains("final")) {
+      finalNumber++;
+  }
+          if (currentLine.contains("finally")) {
+      finallyNumber++;
+  }
+          if (currentLine.contains("float")) {
+      floatNumber++;
+  }
+          if (currentLine.contains("for")) {
+      forNumber++;
+  }
+          if (currentLine.contains("goto")) {
+      gotoNumber++;
+  }
+          if (currentLine.contains("if")) {
+      ifNumber++;
+  }
+          if (currentLine.contains("implements")) {
+      implementsNumber++;
+  }
+          if (currentLine.contains("import")) {
+      importNumber++;
+  }
+          if (currentLine.contains("instanceof")) {
+      instanceofNumber++;
+  }
+          if (currentLine.contains("int")) {
+      intNumber++;
+  }
+          if (currentLine.contains("interface")) {
+      interfaceNumber++;
+  }
+          if (currentLine.contains("long")) {
+      longNumber++;
+  }          
+          if (currentLine.contains("module")) {
+      moduleNumber++;
+  }
+          if (currentLine.contains("native")) {
+      nativeNumber++;
+  }
+          if (currentLine.contains("new")) {
+      newNumber++;
+  }
+          if (currentLine.contains("package")) {
+      packageNumber++;
+  }
+          if (currentLine.contains("private")) {
+      privateNumber++;
+  }
+          if (currentLine.contains("protected")) {
+      protectedNumber++;
+  }
+          if (currentLine.contains("public")) {
+      publicNumber++;
+  }
+          if (currentLine.contains("requires")) {
+      requiresNumber++;
+  }
+          if (currentLine.contains("return")) {
+      returnNumber++;
+  }
+          if (currentLine.contains("short")) {
+      shortNumber++;
+  } 
+          if (currentLine.contains("static")) {
+      staticNumber++;
+  }
+          if (currentLine.contains("strictfp")) {
+      strictfpNumber++;
+  }
+          if (currentLine.contains("super")) {
+      superNumber++;
+  }
+          if (currentLine.contains("switch")) {
+      switchNumber++;
+  }
+          if (currentLine.contains("synchronized")) {
+      synchronizedNumber++;
+  }
+          if (currentLine.contains("this")) {
+      thisNumber++;
+  }
+          if (currentLine.contains("throw")) {
+      throwNumber++;
+  }
+          if (currentLine.contains("throws")) {
+      throwsNumber++;
+  }
+          if (currentLine.contains("transient")) {
+      transientNumber++;
+  }
+          if (currentLine.contains("try")) {
+      tryNumber++;
+  }
+                  if (currentLine.contains("var")) {
+      varNumber++;
+  }
+          if (currentLine.contains("void")) {
+      voidNumber++;
+  }
+          if (currentLine.contains("volatile")) {
+      volatileNumber++;
+  }
+          if (currentLine.contains("while")) {
+      whileNumber++;
+  }
+          
+      }
+    TotalKeywords1=abstractNumber+
+assertNumber+
+booleanNumber+
+breakNumber+
+byteNumber+
+caseNumber+
+catchNumber+
+charNumber+
+classNumber+
+continueNumber+
+constNumber+
+defaultNumber+
+doNumber+
+doubleNumber+
+elseNumber+
+enumNumber+
+exportsNumber+
+extendsNumber+
+finalNumber+
+finallyNumber+
+floatNumber+
+forNumber+
+gotoNumber+
+ifNumber+
+implementsNumber+
+importNumber+
+instanceofNumber+
+intNumber+
+interfaceNumber+
+longNumber+
+moduleNumber+
+nativeNumber+
+newNumber+
+packageNumber+
+privateNumber+
+protectedNumber+
+publicNumber+
+requiresNumber+
+returnNumber+
+shortNumber+
+staticNumber+
+strictfpNumber+
+superNumber+
+switchNumber+
+synchronizedNumber+
+thisNumber+
+throwNumber+
+throwsNumber+
+transientNumber+
+tryNumber+
+varNumber+
+voidNumber+
+volatileNumber+
+whileNumber;   
+  }
+      
+      
+      public void parse2()throws IOException	 	       	    	      	  	     	  	
+  {
+       File file = importedFile.ImportFile2();
       Scanner newFile = new Scanner(file);
       while(newFile.hasNextLine()){
           String currentLine =newFile.nextLine();
@@ -469,7 +700,7 @@ public class Parser {
           
       }
       
-      TotalKeywords=abstractNumber+
+      TotalKeywords2=abstractNumber+
 assertNumber+
 booleanNumber+
 breakNumber+

@@ -23,8 +23,14 @@ public class Importer {
         this.filepath = filepath;
     }
     
-  public  File ImportFile(){
+  public  File ImportFile1(){
     filepath = "H:\\Desktop/captmidn.txt";
+    File file = new File (filepath);
+    return file;  
+  }
+  
+  public  File ImportFile2(){
+    filepath = "H:\\Desktop/Captcha.txt";
     File file = new File (filepath);
     return file;  
   }

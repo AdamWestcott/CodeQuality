@@ -21,9 +21,24 @@ private int keywordCount;
 private String code;
   
 
-  public int calculateNumberOfLines()throws IOException{
+  public int calculateNumberOfLines1()throws IOException{
       try{
-      File file = importedFile.ImportFile();
+      File file = importedFile.ImportFile1();
+      Scanner newFile = new Scanner(file);
+      while(newFile.hasNextLine()){
+          count++;
+          newFile.nextLine();
+      }
+      return count;
+  }
+ catch(IOException e){
+          throw e;
+      }   
+  }
+  
+  public int calculateNumberOfLines2()throws IOException{
+      try{
+      File file = importedFile.ImportFile2();
       Scanner newFile = new Scanner(file);
       while(newFile.hasNextLine()){
           count++;
@@ -38,15 +53,33 @@ private String code;
   
  
   
-  public int calculateNumberOfKeywords() throws IOException{
-      Measures.parse();
-      keywordCount=Measures.getTotalKeywords();
+  public int calculateNumberOfKeywords1() throws IOException{
+      Measures.parse1();
+      keywordCount=Measures.getTotalKeywords1();
       return keywordCount;
   }
   
-  public int calculateCyclomaticComplexity() throws IOException
+  public int calculateNumberOfKeywords2() throws IOException{
+      Measures.parse2();
+      keywordCount=Measures.getTotalKeywords2();
+      return keywordCount;
+  }
+  
+  public int calculateCyclomaticComplexity1() throws IOException
   {
-      Measures.parse();
+      Measures.parse1();
+     int cyclomaticComplexity =Measures.getIfNumber()
+             +Measures.getWhileNumber()
+             +Measures.getForNumber()
+             +Measures.getSwitchNumber()
+             +Measures.getCaseNumber()
+             +1;
+     return cyclomaticComplexity;
+  }
+  
+  public int calculateCyclomaticComplexity2() throws IOException
+  {
+      Measures.parse2();
      int cyclomaticComplexity =Measures.getIfNumber()
              +Measures.getWhileNumber()
              +Measures.getForNumber()

@@ -23,9 +23,26 @@ public class Exporter {
    
   public void ExportMeasures1() throws IOException	 	       	    	      	  	     	  	
   {	     
-   int numberOfLines = measures.calculateNumberOfLines();
-   int numberOfKeywords = measures.calculateNumberOfKeywords();
-   int cyclomaticComplexity = measures.calculateCyclomaticComplexity();
+   int numberOfLines = measures.calculateNumberOfLines1();
+   int numberOfKeywords = measures.calculateNumberOfKeywords1();
+   int cyclomaticComplexity = measures.calculateCyclomaticComplexity1();
+  try (FileWriter exports = new FileWriter("H:\\Desktop/"+filename+".txt")) {
+      exports.write("Cyclomatic Complexity: "+cyclomaticComplexity+ "\n");
+      exports.write("Number of Lines: "+numberOfLines+ "\n");
+      exports.write("Number of Keywords: "+numberOfKeywords);
+      exports.close();
+  }
+  catch(FileNotFoundException e){
+          throw e;
+      }
+  
+  }
+  
+  public void ExportMeasures2() throws IOException	 	       	    	      	  	     	  	
+  {	     
+   int numberOfLines = measures.calculateNumberOfLines2();
+   int numberOfKeywords = measures.calculateNumberOfKeywords2();
+   int cyclomaticComplexity = measures.calculateCyclomaticComplexity2();
   try (FileWriter exports = new FileWriter("H:\\Desktop/"+filename+".txt")) {
       exports.write("Cyclomatic Complexity: "+cyclomaticComplexity+ "\n");
       exports.write("Number of Lines: "+numberOfLines+ "\n");
