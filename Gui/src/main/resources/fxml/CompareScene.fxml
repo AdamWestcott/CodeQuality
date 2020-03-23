@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:id="gridPane2"
+          fx:controller="com.mycompany.gui.CompareSceneController">
+          
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <Label style="-fx-font: NORMAL 15 Tahoma;" text="Measures For 1st Code"                
+           GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>
+    
+    <TextArea fx:id="compareView" 
+               text = ""
+               editable="false"
+               GridPane.columnIndex="0" 
+               GridPane.columnSpan="1" 
+               GridPane.hgrow="ALWAYS" 
+               GridPane.vgrow="ALWAYS"
+               GridPane.rowIndex="1">
+    </TextArea>
+   
+    <Button fx:id="button1" 
+           GridPane.columnIndex="0" 
+            GridPane.rowIndex="2" 
+            text="Export Measures"
+            onAction ="#ExportCode3"/>
+    </GridPane>
